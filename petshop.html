@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetNumma</title>
+    
+    <!-- ? Fav Icon -->
+    <link rel="favicon-16x16" type= "image/png" href="/img/favicon-16x16.png">
+    <!-- ? Arquivo CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+    crossorigin="anonymous">
+    <!-- ? Script JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <img class="me-3" src="/img/favicon2-32x32.png" alt="PetNumma" />
+            <a class="navbar-brand" href="#topo">PetNumma</a>
+
+            <div class="collapse navbar-collapse" id="navBarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                 <li>
+                    <a class="nav-link active" aria-current="page" href="#tabshop">Shop</a>
+                 </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" 
+                   id="dropGeneros" 
+                   role="button" 
+                   data-bs-toggle="dropdown"
+                   href="#drop"
+                   aria-expanded="false">
+                   Serviços
+                     </a>
+                    <ul class="dropdown-menu" 
+                        aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#gbanho">Banho</a></li>
+                        <li><a class="dropdown-item" href="#gtosa">Tosa</a></li>
+                        <li><a class="dropdown-item" href="#gvet">Veterinário</a></li>
+                        <li><a class="dropdown-item" href="#gvaci">Vacinas</a></li>
+                        
+                    </ul>
+                
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#cadusuario">Cadastrar-se   
+                    </a>
+
+                </li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="display-1 text-center mb-5 mt-3" id="topo">PetNumma</h1>
+
+    <div class="container">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Tutor</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Turno</th>
+                    
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th class="text-center table-primary" colspan="7" id="gbanho" >Banho</th>
+                </tr>
+                <tr>
+                    <th scope="row">Pingo</th>
+                    <td scope="col">Lucas Silva</td>
+                    <td scope="col">20/04/2023</td>
+                    <td scope="col">(21)99876-5413</td>
+                    <td scope="col">lucassilva@yahoo.com.br</td>
+                    <td scope="col">Manhã</td>
+                    
+                </tr>
+               
+                <tr>
+                    <th class="text-center table-primary" colspan="7" id="gtosa" >Tosa</th>
+                </tr>
+                <tr>
+                    <th scope="row">Pipoca</th>
+                    <td scope="col">Sandra Oliveira</td>
+                    <td scope="col">20/04/2023</td>
+                    <td scope="col">(21)98012-6319</td>
+                    <td scope="col">oliveirasandra@live.com</td>
+                    <td scope="col">Noite</th>
+                    
+                </tr>
+                
+                <tr>
+                    <th class="text-center table-primary" colspan="7" id="gvet" >Veterinário</th>
+                </tr>
+                <tr>
+                    <th scope="row">Pluto</th>
+                    <td scope="col">Paulo Almeida</td>
+                    <td scope="col">20/04/2023</td>
+                    <td scope="col">(21)97654-9087</td>
+                    <td scope="col">paulo.almeida@gmail.com</td>
+                    <td scope="col">Manhã</th>
+                    
+                </tr>
+                
+                <tr>
+                    <th class="text-center table-primary" colspan="7" id="gvaci" >Vacinas</th>
+                </tr>
+                <tr>
+                    <th scope="row">Marrie</th>
+                    <td scope="col">Thales Rock</td>
+                    <td scope="col">20/04/2023</td>
+                    <td scope="col">(21)98654-1223</td>
+                    <td scope="col">rock.thales@live.com</td>
+                    <td scope="col"> Tarde</th>
+                    
+                </tr>
+               
+                <tr id="insertRow"></tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="mb-5 mt-5">
+        <hr class="border-primary border-3 opacity-75" />
+    </div>
+
+    <div class="container mb-5" id="cadusuario">
+        <h2 class="text-center mb-4">Cadastrar-se</h2>
+
+        <form name="register" onsubmit="event.preventDefault()">
+            <!-- Cadastro do Cliente e do Tutor -->
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="customerUsuario" class="form-label">Cliente</label>
+                    <input type="text" class="form-control" id="customerUsuario" name="customer"/>
+                </div>
+
+                <div class="mb-3 col">
+                  <label for="tutorUsuario" class="form-label">Tutor</label>
+                  <input type="text" class="form-control" id="tutorUsuario" name="tutor"/>
+                </div>
+            </div>
+
+        <!-- Cadastro de Telefone, E-mail e Data-->
+          <div class="row">
+            <div class="mb-3 col">
+                <label for="phoneUsuario" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="phoneUsuario" name="phone" />
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="mailUsuario" class="form-label">E-mail</label>
+                    <input type="text" class="form-control" id="mailUsuario" name="mail" />
+                </div>
+
+            <div class="mb-3 col">
+                <label for="dateUsuario" class="form-label">Data</label>
+                <input 
+                 type="text"
+                 class="form-control"
+                 id="dateUsuario"
+                 placeholder="DD de MM de AA"
+                 name="date"
+                />
+            </div>
+          </div>
+
+          <!-- Cadastro de Turno-->
+          <p>Selecione o Turno</p>
+          <div class="row mt-3">
+            <div class="col form-check ms-5">
+                <input 
+                 type="radio" 
+                  id="radioManha" 
+                  name="radio" 
+                  class="form-check-input"
+                 value="manha"
+                />
+                <label for="radioManha" class="form-label">
+                    Manhã
+                </label>
+
+            </div>
+            <div class="col form-check">
+                <input 
+                 type="radio" 
+                 id="radioTarde"
+                 name="radio"
+                 class="form-check-input"
+                 value="tarde"
+                />
+                <label for="radioTarde" class="form-label">
+                    Tarde
+                </label>
+
+            </div>
+            <div class="col form-check">
+                <input 
+                 type="radio" 
+                 id="ragioNoite" 
+                 name="radio" 
+                 class="form-check-input" 
+                 value="noite"
+                />
+                <label for="radioNoite" class="form-label">Noite</label>
+
+            </div>
+        
+            <!--Cadastro de Serviço-->
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="serviceUsuario" class="form-label">Preencha o tipo de Serviço</label>
+                    <input type="text" class="form-control" id="serviceUsuario" name="service" />
+                </div>
+          <!-- Botão de Enviar-->
+          <div class="col-auto d-flex justify-content-center">
+            <button 
+            type="submit" 
+            onclick="validationForm(); insert()" 
+            class="btn btn-primary mt-5">Enviar
+            </button>
+          </div>
+        </form>
+    </div>
+</body>
+</html>

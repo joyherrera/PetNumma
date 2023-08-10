@@ -1,0 +1,13 @@
+Aula 11 - Finalizando a locadora 2000
+
+
+verificação condicional serve para identificar se nosso cod e verdadeiro, se for sera executado
+
+if- ver se é verdadeiro e executa o bloco de cod
+if true
+if false
+
+else não tem verificaçõa, so e executado quando nosso cod nao cai em nenhuma das verificações do noss cod.
+
+onclick executa
+onsubimit cancela

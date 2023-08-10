@@ -1,0 +1,6 @@
+let validationRadio2 = document.forms["register"]["radio2"].value;
+
+if (validationRadio2 == "")  {
+        alert("A Forma de Pagamento deve ser preenchida");
+        return false;
+    }
